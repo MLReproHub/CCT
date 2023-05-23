@@ -1,0 +1,7 @@
+params:
+  hflip_p: null
+  random_crops: False
+  translate_p: null
+  auto_augment: True
+batch_size: 128
+which: Cifar10

@@ -1,0 +1,28 @@
+seed: 42
+dl:
+  params:
+    hflip_p: 0.5
+    random_crops: True
+    translate_p: null
+    auto_augment: False
+  batch_size: 128
+  which: Cifar10
+model:
+  which: CCT
+  params:
+    d_model: 256
+    h_dim_mlp: 512
+    num_classes: 10
+    num_heads: 4
+    num_enc_layers: 7
+    kernel_size: 3
+    num_conv_blocks: 1
+num_epochs: 200
+optim:
+  params:
+    betas: !!python/tuple
+      - 0.9
+      - 0.999
+    lr: 0.0005
+    weight_decay: 0.03
+  which: AdamW
